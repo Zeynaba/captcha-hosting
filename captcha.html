@@ -1,1 +1,22 @@
-Ton code HTML ici
+<!DOCTYPE html>
+<html>
+<head>
+    <title>reCAPTCHA</title>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script>
+        function onSubmit(token) {
+          window.location.href = "https://success.com?token=" + token;
+        }
+    </script>
+</head>
+<body>
+<form action="?" method="POST">
+    <button class="g-recaptcha"
+            data-sitekey="6Ld4SI0rAAAAAMuxQqhZOv0X9jVKoY8M0zvMK94j"
+            data-callback='onSubmit'
+            data-action='submit'>
+        Verify
+    </button>
+</form>
+</body>
+</html>
